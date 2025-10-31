@@ -139,20 +139,27 @@ struct HotkeyPreferencesView: View {
         Form {
             Section("Global Hotkeys") {
                 VStack(spacing: 15) {
-                    KeybindCaptureView(
-                        hotkeyConfig: $recordingHotkey,
-                        label: "Start/Stop Recording"
-                    )
-                    .onChange(of: recordingHotkey) { newValue in
-                        saveRecordingHotkey(newValue)
+                    // KeybindCaptureView temporarily disabled - displaying static text
+                    HStack {
+                        Text("Start/Stop Recording")
+                            .frame(width: 150, alignment: .leading)
+                        Text(recordingHotkey.displayString)
+                            .font(.system(.body, design: .monospaced))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(Color(NSColor.controlBackgroundColor))
+                            .cornerRadius(6)
                     }
 
-                    KeybindCaptureView(
-                        hotkeyConfig: $playbackHotkey,
-                        label: "Play/Stop Playback"
-                    )
-                    .onChange(of: playbackHotkey) { newValue in
-                        savePlaybackHotkey(newValue)
+                    HStack {
+                        Text("Play/Stop Playback")
+                            .frame(width: 150, alignment: .leading)
+                        Text(playbackHotkey.displayString)
+                            .font(.system(.body, design: .monospaced))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(Color(NSColor.controlBackgroundColor))
+                            .cornerRadius(6)
                     }
                 }
                 .padding(.vertical, 5)

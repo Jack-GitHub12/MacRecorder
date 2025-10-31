@@ -20,8 +20,9 @@
 		011 /* MacroListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroListView.swift; sourceTree = "<group>"; };
 		012 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		013 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
-		014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		015 /* MacroRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		014 /* KeybindCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybindCaptureView.swift; sourceTree = "<group>"; };
+		015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016 /* MacroRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -49,7 +50,7 @@
 		102 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				015 /* MacroRecorder.app */,
+				016 /* MacroRecorder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +84,7 @@
 				011 /* MacroListView.swift */,
 				012 /* StatusBarView.swift */,
 				013 /* PreferencesView.swift */,
+				014 /* KeybindCaptureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,7 +113,7 @@
 			);
 			name = MacroRecorder;
 			productName = MacroRecorder;
-			productReference = 015 /* MacroRecorder.app */;
+			productReference = 016 /* MacroRecorder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,11 +149,40 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXBuildFile section */
+		501 /* MacroRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001 /* MacroRecorderApp.swift */; };
+		502 /* MacroEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002 /* MacroEvent.swift */; };
+		503 /* EventRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003 /* EventRecorder.swift */; };
+		504 /* EventPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004 /* EventPlayer.swift */; };
+		505 /* MacroSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005 /* MacroSession.swift */; };
+		506 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006 /* HotkeyManager.swift */; };
+		507 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007 /* ContentView.swift */; };
+		508 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008 /* ControlsView.swift */; };
+		509 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009 /* EventListView.swift */; };
+		510 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010 /* EventEditorView.swift */; };
+		511 /* MacroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011 /* MacroListView.swift */; };
+		512 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012 /* StatusBarView.swift */; };
+		513 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013 /* PreferencesView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXSourcesBuildPhase section */
 		202 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501 /* MacroRecorderApp.swift in Sources */,
+				502 /* MacroEvent.swift in Sources */,
+				503 /* EventRecorder.swift in Sources */,
+				504 /* EventPlayer.swift in Sources */,
+				505 /* MacroSession.swift in Sources */,
+				506 /* HotkeyManager.swift in Sources */,
+				507 /* ContentView.swift in Sources */,
+				508 /* ControlsView.swift in Sources */,
+				509 /* EventListView.swift in Sources */,
+				510 /* EventEditorView.swift in Sources */,
+				511 /* MacroListView.swift in Sources */,
+				512 /* StatusBarView.swift in Sources */,
+				513 /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +275,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -318,7 +349,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

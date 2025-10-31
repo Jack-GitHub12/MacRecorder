@@ -4,8 +4,8 @@
 # This script creates a distributable .dmg file
 
 APP_NAME="MacroRecorder"
-APP_BUNDLE="${APP_NAME}.app"
-DMG_NAME="${APP_NAME}-v1.0"
+APP_BUNDLE="build/${APP_NAME}.app"
+DMG_NAME="${APP_NAME}-v1.0.1"
 VOLUME_NAME="${APP_NAME}"
 DMG_TEMP="${DMG_NAME}-temp.dmg"
 DMG_FINAL="${DMG_NAME}.dmg"
@@ -35,8 +35,8 @@ ln -s /Applications "$STAGING_DIR/Applications"
 
 # Create a README
 cat > "$STAGING_DIR/README.txt" << 'EOF'
-MacroRecorder v1.0
-==================
+MacroRecorder v1.0.1
+====================
 
 Thank you for downloading MacroRecorder!
 
